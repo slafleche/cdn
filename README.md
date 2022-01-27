@@ -1,2 +1,2 @@
-# cdn.github.io-
+# cdn.github.io
 CDN resources
