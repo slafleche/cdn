@@ -14,7 +14,7 @@
   --darktext: #000;
 }
 
-/* body {
+body {
   background-color: #e6e6e6;
   font-family: "Questrial", sans-serif;
   text-align: center;
@@ -139,4 +139,4 @@ nav .links {
   border-left: 1px solid var(--bordercolor);
   border-radius: var(--header-borders);
   text-align: center;
-} */
+}
