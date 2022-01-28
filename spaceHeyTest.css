@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap");
 
 :root {
   --primary: #2c5170;
@@ -123,6 +123,7 @@ footer a {
   width: 170px;
   height: 170px;
   box-shadow: 0px 5px 10px 1px #0000006c;
+  overflow: hidden;
 }
 
 .general-about .profile-pic::after {
@@ -149,26 +150,44 @@ footer a {
   display: none !important;
 }
 
+.comments-table td:first-child a:last-child,
 .person a:last-child {
   display: block;
-  width: 90px;
-  height: 90px;
+  width: 95px;
+  height: 95px;
 }
 
+.comments-table tr td:first-child a:last-child,
 .profile-pic,
 .person a {
   border: solid white 5px;
   border-radius: 50%;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px 0px #000000;
+  margin: auto;
+}
+
+.comments-table tr td:first-child a:last-child::after,
+.profile-pic::after,
+.person a::after {
+  content: "";
   box-shadow: inset 0px 0px 8px 0px #000000;
   display: block;
-  overflow: hidden;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  border-radius: 50%;
 }
 
 .comments-table td:first-child,
 .music-table td:first-child,
 .comments-table td,
 .music-table td {
-  background-color: #60a5fa;
+  /* background-color: #60a5fa; */
+  background-color: var(--primary);
 }
 
 .profile .blurbs .heading,
@@ -177,6 +196,67 @@ footer a {
   color: white;
 }
 
+.count,
 .profile .blurbs .section h4 {
   color: white;
+}
+
+.comments-table p,
+.music-table p,
+.bulletin-table p,
+.forum-table p,
+.groups-table p {
+  font-weight: 400;
+  letter-spacing: 0.1ex;
+}
+
+.comments-table td,
+.music-table td {
+  padding: 0.5em 0.5em;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: none;
+  border: solid white 1px;
+  color: white !important;
+  background-color: var(--primary) !important;
+  cursor: pointer;
+  transition: color 0.2s ease-out;
+  font-weight: 700;
+  line-height: 100%;
+  text-decoration: none !important;
+}
+
+button:hover,
+button:focus,
+button:active,
+[type="button"]:hover,
+[type="button"]:focus,
+[type="button"]:active,
+[type="reset"]:hover,
+[type="reset"]:focus,
+[type="reset"]:active,
+[type="submit"]:hover,
+[type="submit"]:focus,
+[type="submit"]:active {
+  background-color: white !important;
+  color: var(--primary) !important;
+}
+
+.comment-replies {
+  border: 0;
+  background-color: rgba(0, 0, 0, 0.247);
+  margin: 0 0 10px;
+  padding: 5px;
+}
+
+.comment-reply {
+  padding: 0;
+}
+
+.comments-table td a button {
+  padding: 4px 10px;
 }
