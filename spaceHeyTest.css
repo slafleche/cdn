@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&display=swap");
 
+:root {
+  --primary: #2c5170;
+  --secondary: #60a5fa;
+}
+
 body {
   font-family: "PT Sans Narrow";
   letter-spacing: 0.2ex;
@@ -20,13 +25,14 @@ body {
 }
 
 nav {
-  background-color: var(--bgcolor);
+  background-color: var(--primary);
   font-size: max(72%, 16px);
   flex-grow: 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  margin-bottom: 20px;
 }
 
 main {
@@ -34,11 +40,6 @@ main {
   flex-grow: 1;
   padding: 0;
   color: white;
-}
-
-footer {
-  display: flex;
-  flex-grow: 0;
 }
 
 a {
@@ -96,10 +97,12 @@ footer .links li:not(:last-child)::after {
 footer {
   display: flex;
   flex-direction: column;
-  background-color: var(--bgcolor);
   color: white;
   padding: 30px 5px;
   margin: 0;
+  flex-grow: 0;
+  background-color: var(--primary);
+  margin-top: 20px;
 }
 
 .row.profile {
@@ -115,8 +118,65 @@ footer a {
   color: white;
 }
 
-.profile-pic img,
-.person img {
+.general-about .profile-pic {
+  position: relative;
+  width: 170px;
+  height: 170px;
+  box-shadow: 0px 5px 10px 1px #0000006c;
+}
+
+.general-about .profile-pic::after {
+  box-shadow: inset 0px 0px 10px 0px #000000;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.general-about .profile-pic img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.person a:first-child {
+  display: none !important;
+}
+
+.person a:last-child {
+  display: block;
+  width: 90px;
+  height: 90px;
+}
+
+.profile-pic,
+.person a {
   border: solid white 5px;
   border-radius: 50%;
+  box-shadow: inset 0px 0px 8px 0px #000000;
+  display: block;
+  overflow: hidden;
+}
+
+.comments-table td:first-child,
+.music-table td:first-child,
+.comments-table td,
+.music-table td {
+  background-color: #60a5fa;
+}
+
+.profile .blurbs .heading,
+.profile .friends .heading {
+  background-color: var(--secondary);
+  color: white;
+}
+
+.profile .blurbs .section h4 {
+  color: white;
 }
