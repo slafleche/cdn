@@ -1,142 +1,62 @@
-@import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&display=swap");
 
 :root {
-  --bgcolor: rgb(255, 0, 0);
-  --navbg: #182451;
-  --logospacebg: #4267b2;
-  --body-bg: #fff;
-  --mainbg: #28335a;
-  --bordercolor: #9ba2ba;
-  --countcolor: #c8cfe8;
-  --header-bg: #4267b2;
-  --header-borders: 10px 10px 0px 0px;
-  --lighttext: #fff;
-  --darktext: #000;
+  --bgcolor: #2c5170;
+
+  /* --yellow: #fab83d;
+  --yellow-light: #fcdca5;
+  --green-light: #87aba6;
+  --green-medium: #aecddf;
+  --green-dark: #1a2719; */
 }
 
 body {
-  background-color: #e6e6e6;
-  font-family: "Questrial", sans-serif;
-  text-align: center;
+  font-family: "PT Sans Narrow";
+  letter-spacing: 0.2ex;
 }
 
-.logo {
-  content: url("https://cdn.discordapp.com/attachments/874275178576773183/935196932157087834/FaceheyLogo.png");
+.logout-btn {
+  font-size: max(72%, 16px);
+  font-family: "PT Sans Narrow";
+  letter-spacing: 0.2ex;
 }
 
-main {
-  padding: 1rem;
-  background-color: var(--body-bg);
+.container {
+  width: 100%;
 }
 
-p {
-  color: var(--lighttext) !important;
+.container .center {
+  display: flex;
+  align-items: center;
 }
 
-h1 {
-  color: var(--darktext) !important;
+nav {
+  background-color: var(--bgcolor);
+  font-size: max(72%, 16px);
 }
 
-h4 {
-  color: var(--lighttext) !important;
-}
-.details p {
-  color: var(--darktext) !important;
-}
-
-.mood p {
-  color: var(--darktext) !important;
-}
-
-.mood a {
-  color: var(--header-bg) !important;
-}
-
-a {
-  color: #fff;
-}
-
-.heading {
-  background-color: var(--header-bg) !important;
-  border-radius: var(--header-borders);
-  text-align: center;
-  padding: 10px !important;
-  margin-bottom: 5px !important;
-}
-
-.contact,
-.url-info,
-.table-section {
-  border-radius: var(--header-borders);
-  margin-top: 20px !important;
-  background-color: var(--mainbg);
-  border: none !important;
-  margin-bottom: -5px !important;
-}
-
-.comments-table {
-  background-color: var(--mainbg) !important;
-}
-
-.comments-table tr td {
-  padding: 1rem;
-  background-color: var(--mainbg) !important;
-  border: none;
-}
-.comments-table p {
-  background-color: var(--mainbg);
-}
-
-.profile-info .inner {
-  background-color: var(--mainbg);
-}
-
-.profile-info {
-  background-color: var(--mainbg);
-  color: #fff;
-}
-
-.details-table tr td {
-  background-color: var(--mainbg) !important;
-}
-.blurbs {
-  background-color: var(--mainbg);
-  border-radius: var(--header-borders);
-}
-
-.friends {
-  background-color: var(--mainbg);
-  border-radius: var(--header-borders);
-  margin-bottom: 1rem;
-}
-
-.friends .person img {
-  background-color: var(--mainbg);
-  border: 5px solid var(--lighttext);
-  border-radius: 50%;
-  margin-bottom: 1rem;
-}
-
-.count {
-  color: var(--countcolor);
-}
-
-footer,
-nav .top {
-  background-color: var(--logospacebg);
-  margin-top: 1rem;
-  border: 1px solid var(--bordercolor);
-  border-radius: 1rem;
-}
-
+nav .top,
 nav .links {
-  background-color: var(--header-bg);
-  padding: 1rem;
-  font-size: 1rem;
-  margin-top: 1rem;
-  border-top: 1px solid var(--bordercolor);
-  border-right: 1px solid var(--bordercolor);
-  border-left: 1px solid var(--bordercolor);
-  border-radius: var(--header-borders);
-  text-align: center;
+  background: transparent;
+  max-width: 810px;
+  margin: auto;
+}
+
+nav .top .center form {
+  margin-top: 0;
+}
+
+nav .links li:not(:last-child)::after,
+footer .links li:not(:last-child)::after {
+  color: white;
+}
+
+footer {
+  background-color: var(--bgcolor);
+  color: white;
+  padding: 30px 5px;
+}
+
+footer a {
+  color: white;
 }
